@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>blend image effect example</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        .main_header{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        /*img{width: 250px; height: 250px;}*/
+
+        .design{
+            position: relative;
+            width: 400px;
+            height: 400px;
+        }
+        .design > *, .blend > *{
+            position: absolute;
+            width: 400px;
+            height: 400px;
+        }
+        #rotateBorder{
+            border: 15px red solid;
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px #eb311f, inset 0 0 20px #eb311f;
+        }
+        .grid{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns:1fr 1fr ;
+        }
+        .data-white{
+            background: #fff;
+        }
+        img{
+            object-fit: cover;
+
+        }
+        .blend{
+            mix-blend-mode: multiply;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main_header">
+    <div class="design">
+        <img src="images/whitecat.jpg">
+        <div id="rotateBorder"> <!-- THIS DIV IS FOR BORDER -->
+        </div>
+        <div class="grid">
+            <div class="data-white"></div>
+            <div></div>
+            <div></div>
+            <div class="data-white"></div>
+        </div>
+
+        <!--    FOR SECOND IMAGE-->
+        <div class="blend">
+            <img src="images/whitecat.jpg">
+        </div>
+        <div class="grid">
+            <div></div>
+            <div class="data-white"></div>
+            <div class="data-white"></div>
+            <div></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
