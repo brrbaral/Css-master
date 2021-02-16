@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css specificity</title>
+    <style>
+        *{
+            margin: 0; padding: 0;box-sizing: border-box;
+        }
+        .main_div{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background: hsl(168, 76%, 94%);
+        }
+        #main_div__btn__id a{
+            color: #f1c40f;
+        }
+        .main_div .center_div .btn a{
+            color: #2c3e50;
+            font-weight: 700;
+        }
+        .main_div__btn a{
+            color: white;
+            font-weight: 300;
+        }
+        a{
+            color: #7f8c8d;
+        }
+        .btn__tag{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+<header class="main_div">
+    <div class="center_div">
+        <div class="btn main_div__btn" id="main_div__btn__id">
+            <a href="#" class="btn__tag">BR Technology</a>
+        </div>
+    </div>
+</header>
+</body>
+</html>

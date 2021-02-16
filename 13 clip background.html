@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css background clip</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        .main_header{
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            display: grid;
+            place-items: center;
+        }
+        h1{
+            background-image: url("images/whitecat.jpg");
+            background-size: 100% 100%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body>
+<div class="main_header">
+    <h1>BR Technology</h1>
+</div>
+</body>
+</html>
